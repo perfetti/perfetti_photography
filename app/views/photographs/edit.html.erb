@@ -1,6 +1,5 @@
-<h1>Editing photograph</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @photograph %> |
-<%= link_to 'Back', photographs_path %>
+<%- model_class = Photograph -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Photograph %></h1>
+</div>
+<%= render :partial => 'form' %>
