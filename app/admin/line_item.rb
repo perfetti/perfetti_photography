@@ -1,4 +1,5 @@
 ActiveAdmin.register LineItem do
+  permit_params :price_cents, :state
 
 
   # See permitted parameters documentation:
