@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Album -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Album %></h1>
+</div>
 
-<p>
-  <strong>Post:</strong>
-  <%= @album.post %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:updated_on) %></dt>
+      <dd><pre class="prettyprint"><%= @album.updated_on %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:created_on) %></dt>
+      <dd><pre class="prettyprint"><%= @album.created_on %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Updated on:</strong>
-  <%= @album.updated_on %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              albums_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_album_path(@album), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              album_path(@album),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Created on:</strong>
-  <%= @album.created_on %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @album.user %>
-</p>
-
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
