@@ -1,4 +1,5 @@
 ActiveAdmin.register Album do
+  permit_params :updated_on, :created_on
 
 
   # See permitted parameters documentation:
