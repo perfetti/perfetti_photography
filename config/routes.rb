@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :photographs
+
   resources :posts
 
   resources :carts

@@ -1,0 +1,17 @@
+<%= simple_form_for(@photograph) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :album %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :asset_url %>
+    <%= f.input :created_at %>
+    <%= f.input :updated_on %>
+    <%= f.association :user %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

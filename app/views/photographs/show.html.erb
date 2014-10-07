@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @photograph.album %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @photograph.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @photograph.description %>
+</p>
+
+<p>
+  <strong>Asset url:</strong>
+  <%= @photograph.asset_url %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @photograph.created_at %>
+</p>
+
+<p>
+  <strong>Updated on:</strong>
+  <%= @photograph.updated_on %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @photograph.user %>
+</p>
+
+<%= link_to 'Edit', edit_photograph_path(@photograph) %> |
+<%= link_to 'Back', photographs_path %>
