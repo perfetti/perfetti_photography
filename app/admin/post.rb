@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  permit_params :title, :body, :updated_on, :created_on, :published, :publishable
 
 
   # See permitted parameters documentation:
